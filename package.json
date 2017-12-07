@@ -1,0 +1,39 @@
+{
+  "name": "abendschuleapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start":"nodemon",
+	"prod":"tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasRosenberger/AbendSchuleAPI.git"
+  },
+  "keywords": [
+    "API",
+    "TypeScript",
+    "Express.js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucasRosenberger/AbendSchuleAPI/issues"
+  },
+  "homepage": "https://github.com/LucasRosenberger/AbendSchuleAPI#readme",
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/mysql": "^2.15.2",
+    "@types/node": "^8.0.56",
+    "nodemon": "^1.12.5",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mysql": "^2.15.0"
+  }
+}
