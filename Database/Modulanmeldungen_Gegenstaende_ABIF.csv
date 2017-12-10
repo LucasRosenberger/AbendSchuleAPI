@@ -1,0 +1,84 @@
+ABIF - Abendschule;Fach;Sem
+Religion;R;1
+Deutsch;D;1
+Englisch;E1;1
+Angewandte  und techn. Mathematik;AM;1
+Angewandte Informatik(Netzwerk Grundlage) gemeinsam mit 3AKIF-NVS;AINF;1
+Tech. und naturwissensch. Grundlagen (Physik);NWG2;1
+Tech. und naturwissensch. Grundlagen (Chemie);NWG2;1
+Grundlagen der Informatik:  (GDV  + STS + C#-Einführung);GINF;1
+Computerpraktikum: (CPR );COPR;1
+;;
+Religion;R;2
+Deutsch;D;2
+Englisch;E1;2
+Angewandte  und techn. Mathematik;AM;2
+Angewandte Informatik(Netzwerk Grundlage) gemeinsam mit 3AKIF-NVS;AINF;2
+Tech. und naturwissensch. Grundlagen (Physik);NWG2;2
+Tech. und naturwissensch. Grundlagen (Chemie);NWG2;2
+Grundlagen der Informatik:  (GDV  + STS + C#-Einführung);GINF;2
+Computerpraktikum: (CPR );COPR;2
+;;
+Religion;R;3
+Deutsch;D;3
+Englisch;E1;3
+Angewandte  und techn. Mathematik;AM;3
+Programmieren und Software (C#);POS1;3
+Datenbanken und Informationssysteme;DBI1;3
+Betriebswirtschaft und Management;BWM;3
+Systemplanung und Projektentwicklung;SYP1;3
+Technische Informatik: Betriebssysteme ;TINF;3
+Computerpraktikum: C-Programmierung ;COPR;3
+;;
+Religion;R;4
+Deutsch;D;4
+Englisch;E1;4
+Angewandte  und techn. Mathematik;AM;4
+Programmieren und Software (C#);POS1;4
+Datenbanken und Informationssysteme;DBI1;4
+Betriebswirtschaft und Management;BWM;4
+Systemplanung und Projektentwicklung;SYP1;4
+Technische Informatik: Betriebssysteme ;TINF;4
+Computerpraktikum: C-Programmierung ;COPR;4
+;;
+Religion;R;5
+Deutsch / Kommunikation;DUK;5
+Englisch / Kommunikation;EUK;5
+Angewandte  und techn. Mathematik;AM;5
+Wirtschaft und Recht;WR3;5
+Programmieren und Software (C#);POS1;5
+Datenbanken und Informationssysteme;DBI1;5
+Netzwrksysteme und verteilte System: NVS;NVS1;5
+Betriebswirtschaft und Management;BWM;5
+Systemplanung und Projektentwicklung;SYP1;5
+;;
+Religion;R;6
+Deutsch / Kommunikation;D;6
+Englisch / Kommunikation;E1;6
+Angewandte  und techn. Mathematik;AM;6
+Wirtschaft und Recht;WR3;6
+Programmieren und Software (C#);POS1;6
+Datenbanken und Informationssysteme;DBI1;6
+Netzwrksysteme und verteilte System: NVS;NVS1;6
+Betriebswirtschaft und Management;BWM;6
+Systemplanung und Projektentwicklung;SYP1;6
+;;
+Wirtschaft und Recht;WR3;7
+Programmieren und Software (C#);POS1;7
+Datenbanken und Informationssysteme;DBI1;7
+Netzwrksysteme und verteilte System: NVS;NVS1;7
+Netzwrksysteme und verteilte System: verteiles Programmieren;NVS1;7
+Betriebswirtschaft und Management;BWM;7
+Systemplanung und Projektentwicklung;SYP1;7
+;;
+Wirtschaft und Recht;WR3;8
+Programmieren und Software (C#);POS1;8
+Datenbanken und Informationssysteme;DBI1;8
+Netzwrksysteme und verteilte System: NVS;NVS1;8
+Netzwrksysteme und verteilte System: verteiles Programmieren;NVS1;8
+Betriebswirtschaft und Management;BWM;8
+Systemplanung und Projektentwicklung;SYP1;8
+;;
+;;
+;;
+;;

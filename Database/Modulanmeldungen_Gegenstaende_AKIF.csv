@@ -1,0 +1,59 @@
+AKIF - Kolleg;Fach;Sem
+;;
+Religion;R;3
+Programmieren und Software (C#);POS1;3
+Datenbanken und Informationssysteme;DBI1;3
+Netzwrksysteme und verteilte System: AINF - gemeinsam mit 1ABIF;NVS1;3
+Betriebswirtschaft und Management;BWM;3
+Systemplanung und Projektentwicklung;SYP1;3
+Technische Informatik: GINF (Grundlagen);TINF;3
+Technische Informatik: TINF (Betriebssysteme);TINF;3
+Computerpraktikum: (CPR );CORP;3
+Computerpraktikum: (C-Programmieren);CORP;3
+;;
+Religion;R;4
+Programmieren und Software (C#);POS1;4
+Datenbanken und Informationssysteme;DBI1;4
+Netzwrksysteme und verteilte System: AINF - gemeinsam mit 1ABIF;NVS1;4
+Betriebswirtschaft und Management;BWM;4
+Systemplanung und Projektentwicklung;SYP1;4
+Technische Informatik: GINF (Grundlagen);TINF;4
+Technische Informatik: TINF (Betriebssysteme);TINF;4
+Computerpraktikum: (CPR );CORP;4
+Computerpraktikum: (C-Programmieren);CORP;4
+;;
+Religion;R;5
+Deutsch / Kommunikation;DUK;5
+Englisch / Kommunikation;EUK;5
+Angewandte  und techn. Mathematik;AM;5
+Wirtschaft und Recht;WR3;5
+Programmieren und Software (C#);POS1;5
+Datenbanken und Informationssysteme;DBI1;5
+Netzwrksysteme und verteilte System: NVS;NVS1;5
+Betriebswirtschaft und Management;BWM;5
+Systemplanung und Projektentwicklung;SYP1;5
+;;
+Religion;R;6
+Angewandte  und techn. Mathematik;AM;6
+Wirtschaft und Recht;WR3;6
+Programmieren und Software (C#);POS1;6
+Datenbanken und Informationssysteme;DBI1;6
+Netzwrksysteme und verteilte System: NVS;NVS1;6
+Betriebswirtschaft und Management;BWM;6
+Systemplanung und Projektentwicklung;SYP1;6
+;;
+Wirtschaft und Recht;WR3;7
+Programmieren und Software (C#);POS1;7
+Datenbanken und Informationssysteme;DBI1;7
+Netzwrksysteme und verteilte System: NVS;NVS1;8
+Netzwrksysteme und verteilte System: Java - verteiles Programmieren;NVS1;8
+Betriebswirtschaft und Management;BWM2;7
+Systemplanung und Projektentwicklung;SYP1;7
+;;
+Wirtschaft und Recht;WR3;8
+Programmieren und Software (C#);POS1;8
+Datenbanken und Informationssysteme;DBI1;8
+Netzwrksysteme und verteilte System: NVS;NVS1;8
+Netzwrksysteme und verteilte System: Java - verteiles Programmieren;NVS1;8
+Betriebswirtschaft und Management;BWM2;8
+Systemplanung und Projektentwicklung;SYP1;8

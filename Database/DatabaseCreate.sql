@@ -1,0 +1,38 @@
+CREATE TABLE Schueler
+(
+  Id INT NOT NULL,
+  Klasse VARCHAR(50) NOT NULL,
+  FirstName VARCHAR(50) NOT NULL,
+  LastName VARCHAR(50) NOT NULL,
+  Password VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE Admin
+(
+  Id INT NOT NULL,
+  FirstName VARCHAR(50) NOT NULL,
+  LastName VARCHAR(50) NOT NULL,
+  Password VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE Gegenstand
+(
+  Id INT NOT NULL,
+  Kolleg VARCHAR(50) NOT NULL,
+  Fach VARCHAR(50) NOT NULL,
+  Sem VARCHAR(50) NOT NULL,
+  Klasse VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Id)
+);
+
+CREATE TABLE Picked
+(
+  Id INT NOT NULL,
+  GegenstandId INT NOT NULL,
+  SchülerId INT NOT NULL,
+  PRIMARY KEY (Id),
+  FOREIGN KEY (GegenstandId) REFERENCES Gegenstand(Id),
+  FOREIGN KEY (SchülerId) REFERENCES Schueler(Id)
+);
