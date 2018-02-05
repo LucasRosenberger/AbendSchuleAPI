@@ -7,12 +7,12 @@ const port = 6969;
 //The routes file bound to the Server
 
 let setRoutes = new Routes(app);
-var Client = require('mysql');
+const Client = require('mysql');
 
 var c = Client.createConnection({
     host:'127.0.0.1',
     user: 'root',
-    password: '',
+    password: '1221',
     database: 'schuleapi'
 });
 
@@ -20,6 +20,7 @@ c.connect(function(err){
     if(err){
         console.error('Failed to connect');
     }
+    console.log("Database are connected.")
 })
 
 app.listen(port, (err) => {
@@ -31,4 +32,81 @@ app.listen(port, (err) => {
 
 app.get('/initDatabase', function(req, res){
 
+});
+
+app.get('/getKurseABIF', function(req, res){
+    c.query('SELECT id, Kolleg, Fach, Sem from gegenstand where klasse = "ABIF"', function (erre, rows, fields){
+		if(erre) {
+			res.send('');
+		}
+		else if(rows == ''){
+			res.send('');
+		}
+		else{
+			res.send(JSON.stringify(rows));
+		}
+	})
+});
+
+app.get('/getKurseAKIF', function(req, res){
+    c.query('SELECT id, Kolleg, Fach, Sem from gegenstand where klasse = "AKIF"', function (erre, rows, fields){
+		if(erre) {
+			res.send('');
+		}
+		else if(rows == ''){
+			res.send('');
+		}
+		else{
+			res.send(JSON.stringify(rows));
+		}
+	})
+});
+
+app.get('/getPickedFacher/:id', function(req, res){
+    c.query('SELECT id from picked where schülerid = ?',[req.params.id], function (erre, rows, fields){
+		if(erre) {
+			res.send('');
+		}
+		else if(rows == ''){
+			res.send('');
+		}
+		else{
+			res.send(JSON.stringify(rows));
+		}
+	})
+});
+
+app.get('/getUser/:id', function(req, res){
+    c.query('SELECT id, klasse, Firstname, lastname from schueler where id = ?',[req.params.id], function (erre, rows, fields){
+		if(erre) {
+			res.send('');
+		}
+		else if(rows == ''){
+			res.send('');
+		}
+		else{
+			res.send(JSON.stringify(rows));
+		}
+	})
+});
+
+app.post('/AllowedUser/:user', function(req, res){
+    console.log(req.body);
+    c.query('SELECT password from schueler where id = ?',[req.params.user], function (erre, rows, fields){
+		if(erre) {
+			res.send('');
+		}
+		else if(rows == ''){
+			res.send('0');
+		}
+		else{
+			if(req.body == rows[0].password){
+                res.send('1');
+            }
+		}
+	})
+});
+
+app.post('/setPicked/:user', function(req, res){
+    console.log(req.body);
 });
