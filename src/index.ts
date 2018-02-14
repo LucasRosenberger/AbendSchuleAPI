@@ -76,8 +76,8 @@ app.get('/getPickedFacher/:id', function(req, res){
 	})
 });
 
-app.get('/getUser/:id', function(req, res){
-    c.query('SELECT id, klasse, Firstname, lastname from schueler where id = ?',[req.params.id], function (erre, rows, fields){
+app.get('/getUser/:username', function(req, res){
+    c.query('SELECT id, klasse, Firstname, lastname from schueler where username = ?',[req.params.username], function (erre, rows, fields){
 		if(erre) {
 			res.send('');
 		}
@@ -91,10 +91,10 @@ app.get('/getUser/:id', function(req, res){
 });
 
 app.post('/AllowedUser/:user', function(req, res){
-    console.log(req.body);
-    c.query('SELECT password from schueler where id = ?',[req.params.user], function (erre, rows, fields){
+	console.log(req.body);
+    c.query('SELECT password from schueler where username = ?',[req.params.user], function (erre, rows, fields){
 		if(erre) {
-			res.send('');
+			res.send('0');
 		}
 		else if(rows == ''){
 			res.send('0');
