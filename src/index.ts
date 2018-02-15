@@ -62,8 +62,8 @@ app.get('/getKurseAKIF', function(req, res){
 	})
 });
 
-app.get('/getPickedFacher/:id', function(req, res){
-    c.query('SELECT id from picked where schülerid = ?',[req.params.id], function (erre, rows, fields){
+app.get('/getPickedFacher/:username', function(req, res){
+    c.query('SELECT gegenstandid from picked, schueler where schueler.username = ? and schueler.id = picked.schülerid',[req.params.username], function (erre, rows, fields){
 		if(erre) {
 			res.send('');
 		}
@@ -91,7 +91,6 @@ app.get('/getUser/:username', function(req, res){
 });
 
 app.post('/AllowedUser/:user', function(req, res){
-	console.log(req.body);
     c.query('SELECT password from schueler where username = ?',[req.params.user], function (erre, rows, fields){
 		if(erre) {
 			res.send('0');
@@ -100,7 +99,7 @@ app.post('/AllowedUser/:user', function(req, res){
 			res.send('0');
 		}
 		else{
-			if(req.body == rows[0].password){
+			if(req.body.password == rows[0].password){
                 res.send('1');
             }
 		}
