@@ -32,8 +32,10 @@
   },
   "dependencies": {
     "cors": "^2.8.4",
+    "dateformat": "^3.0.3",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.0",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "randomstring": "^1.1.5"
   }
 }
