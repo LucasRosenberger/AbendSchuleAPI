@@ -221,7 +221,48 @@ app.post('/AllowedUser/:user', function(req, res){
 });
 
 app.post('/setPicked/:session', function(req, res){
-    
+	c.query('SELECT id, starttime from usersession where usersession.SessionString = ?',[req.params.session], function(err, row, field){
+		if(err){
+			res.send('');
+		}
+		else if(row == ''){
+			res.send('');
+		}
+		else{
+			var now = new Date(row[0].starttime);
+			var h = now.getHours() + 3;
+			now.setHours(h);
+			if(new Date() < now){
+				var y = req.body.picked;
+				var z = req.body.deleted;
+				console.log(y[0]);
+				var x = 0;
+				var a = 0;
+				while(y[x] != undefined){
+					c.query('Insert into picked (gegenstandid, schülerid) values(?, ?)', [y[0], row[0].id], function(erre, rows, fields){
+						if(erre){
+							console.log('problem');
+						}
+						else{
+
+						}
+					});	
+					x++;
+				}
+				while(z[a] != undefined){
+					c.query('delete from picked where gegenstandid = ? and schülerid = ?', [z[0], row[0].id], function(erre, rows, fields){
+						if(erre){
+							console.log('problem');
+						}
+						else{
+							console.log('ok');
+						}
+					});	
+					a++;
+				}
+			}
+		}
+	});
 });
 
 
@@ -246,26 +287,17 @@ app.post('/sendnewPupils/:adminsession', function(req, res){
 					var user = y[x].klasse.replace(/[0-9]/ , "");
 					var search = user + new Date().getFullYear().toString().substring(2,4);
 					var t;
-					c.query('SELECT count(id) as c FROM `schueler` WHERE username like ?', [search] , function(error, reihe, felder){
-						if(error){
-							console.log('shit');
+					var number = parseInt(new Date().getFullYear().toString().substring(2,4));
+					number = number *1000 + x;
+					user = user + number.toString();
+					c.query('Insert into schueler (Klasse, Firstname, Lastname, password, username) values (?, ? ,?, ?, ?)', [y[x].klasse, y[x].firstname, y[x].lastname, password, user],  function(erre, rows, fields){
+						if(erre){
+							
 						}
 						else{
-							t = reihe[0].c;
+							
 						}
 					});
-					var number = parseInt(new Date().getFullYear().toString().substring(2,4));
-					number = number *1000 + parseInt(t);
-					console.log(t);
-					user = user + number.toString();
-//					c.query('Insert into schueler (Klasse, Firstname, Lastname, password, username) values (?, ? ,?, ?, ?)', [y[x].klasse, y[x].firstname, y[x].lastname, password, user],  function(erre, rows, fields){
-//						if(erre){
-//							console.log('problem')
-//						}
-//						else{
-//							
-//						}
-//					});
 					x++;
 				}
 			}
@@ -290,9 +322,10 @@ app.post('/sendnewFacher/:adminsession', function(req, res){
 			now.setHours(h);
 			if(new Date() < now){
 				var y = req.body.newFacher;
+				var t = req.body.klass;
 				var x = 0;
-				do{
-					c.query('Insert into gegenstand (Kolleg, Fach, Sem, Klasse) values (?, ? ,?, \"AKIF\")', [y[x].Kolleg, y[x].Fach, y[x].Sem],  function(erre, rows, fields){
+				while(y[x] != undefined){
+					c.query('Insert into gegenstand (Kolleg, Fach, Sem, Klasse) values (?, ? ,?, ?)', [y[x].Kolleg, y[x].Fach, y[x].Sem, t],  function(erre, rows, fields){
 						if(erre){
 							res.send('');
 						}
@@ -300,7 +333,7 @@ app.post('/sendnewFacher/:adminsession', function(req, res){
 						}
 					});
 					x++;
-				}while(y[x] != undefined);
+				}
 			}
 			else{
 				res.send('error');
